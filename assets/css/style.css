@@ -1,0 +1,1405 @@
+/* ШРИФТЫ */
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope/Manrope-Regular.woff2') format('woff2'),
+        url('../fonts/Manrope-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-SemiBold.woff2') format('woff2'),
+        url('../fonts/Manrope-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Bold.woff2') format('woff2'),
+        url('../fonts/Manrope-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+        url('../fonts/Raleway-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+        url('../fonts/Raleway-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* MOBILE FIRST */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-image: url(../images/Основной\ фон.jpg);
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ШАПКА (ФИКСИРОВАННАЯ) */
+.header {
+    background-color: rgba(45, 20, 70, 0.95);
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e0d6ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #c9a8ff;
+}
+
+.login-btn {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #c9a8ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c9a8ff;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #8C45CE;
+    border-color: #8C45CE;
+    color: #fff;
+}
+
+/* ПЕРВЫЙ БЛОК (HERO) */
+.hero {
+    padding: 100px 0 40px;
+}
+
+.hero-card {
+    background: linear-gradient(135deg, rgba(140, 69, 206, 0.15), rgba(13, 11, 28, 0.8));
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: #c9a8ff;
+    margin-bottom: 30px;
+}
+
+.hero-brand {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* КНОПКИ */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #8C45CE;
+    color: #fff;
+    border: 2px solid #8C45CE;
+}
+
+.btn-primary:hover {
+    background-color: #7538b0;
+    border-color: #7538b0;
+    transform: translateY(-2px);
+}
+
+/* О ПРОЕКТЕ */
+.about-project {
+    padding: 60px 0;
+}
+
+.about-card {
+    background-color: #151325;
+    border-radius: 24px;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-title-left {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.about-subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.about-text p {
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+.about-list {
+    list-style: none;
+    margin-top: 16px;
+}
+
+.about-list li {
+    margin-bottom: 8px;
+    color: #b8b8b8;
+    padding-left: 15px;
+    position: relative;
+}
+
+.about-list li::before {
+    content: '•';
+    color: #8C45CE;
+    position: absolute;
+    left: 0;
+}
+
+.about-list strong {
+    color: #fff;
+}
+
+.about-image-wrapper {
+    position: relative;
+    height: 100%;
+    min-height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-image-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #151325 0%, rgba(21, 19, 37, 0.5) 50%, transparent 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.sections,
+.questions,
+.gallery-preview {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sections-grid,
+.questions-grid,
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.section-card {
+    background-color: #1a1a2e;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.3s;
+    display: block;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image1 {
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/Солнечная\ система.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-image2 {
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/События.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-image3 {
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/История\ Вселенной.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-image4 {
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/Галерея.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-title {
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.question-card {
+    background-color: #1a1a2e;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.question-image1 {
+    width: 100%;
+    height: 180px;
+    background-image: url(../images/Вопрос1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.question-image2 {
+    width: 100%;
+    height: 180px;
+    background-image: url(../images/Вопрос2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.question-image3 {
+    width: 100%;
+    height: 180px;
+    background-image: url(../images/Вопрос3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.question-title {
+    padding: 16px 16px 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.question-text {
+    padding: 0 16px 16px;
+    font-size: 14px;
+    color: #b8b8b8;
+}
+
+.gallery-preview {
+    position: relative;
+}
+
+.gallery-blur-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(140, 69, 206, 0.2) 0%, rgba(13, 11, 28, 0) 70%);
+    filter: blur(50px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.gallery-grid {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 240px;
+    background-color: #1f1b36;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.gallery-btn-container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer {
+    background-color: #121021;
+    padding: 40px 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer-logo .logo {
+    font-size: 24px;
+}
+
+.footer-sections ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.footer-sections a {
+    font-size: 14px;
+    color: #b8b8b8;
+    transition: 0.3s;
+}
+
+.footer-sections a:hover {
+    color: #fff;
+}
+
+.footer-resources h4,
+.footer-sections h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #c9a8ff;
+    margin-bottom: 16px;
+}
+
+.resources-logos {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resource-placeholder {
+    width: 70px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resource-placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #777;
+}
+
+/* СОЛНЕЧНАЯ СИСТЕМА */
+.solar-hero {
+    padding: 110px 0 30px;
+    text-align: center;
+}
+
+.main-solar {
+    padding: 0 0 60px;
+    background-size: 100%;
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.planet-card {
+    background: radial-gradient(circle at 30% 30%, #937CBD, #14162A);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.planet-card:hover {
+    transform: translateY(-6px);
+}
+
+.card-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.planet-img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.7));
+    transition: transform 0.3s;
+}
+
+.planet-card:hover .planet-img {
+    transform: scale(1.05);
+}
+
+.no-shadow {
+    filter: none;
+}
+
+.planet-card .card-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.planet-card .card-text {
+    font-size: 13px;
+    color: #d1c7e6;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.card-sun {
+    max-width: 300px;
+    margin: 0 auto 50px;
+}
+
+.card-sun .planet-img {
+    max-width: 160px;
+}
+
+.planets-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.planet-card .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* ДЕТАЛЬНАЯ СТРАНИЦА */
+.planet-detail-hero {
+    padding: 110px 0 60px;
+    text-align: center;
+}
+
+.detail-card {
+    background: linear-gradient(135deg, rgba(147, 124, 189, 0.9), rgba(20, 22, 42, 0.9));
+    border-radius: 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.detail-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.detail-img-wrapper {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.main-planet {
+    background-image: url(../images/Фон\ для\ карточки.jpg);
+    background-size: cover;
+}
+
+.planet-img-large {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.7));
+}
+
+.detail-planet-name {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.detail-desc {
+    font-size: 16px;
+    color: #d1c7e6;
+    line-height: 1.6;
+}
+
+.detail-stats {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 20px;
+}
+
+.detail-stats li {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.detail-stats strong {
+    color: #909090;
+}
+
+.detail-fact h4 {
+    font-size: 18px;
+    color: #b6b3b8;
+    margin-bottom: 10px;
+}
+
+.detail-fact p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ИСТОРИЯ ВСЕЛЕННОЙ */
+.history-hero {
+    padding: 110px 0 40px;
+    text-align: center;
+}
+
+.history-timeline {
+    padding: 0 0 60px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: rgba(140, 69, 206, 0.3);
+    transform: translateX(-50%);
+    display: none;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-content {
+    background: linear-gradient(135deg, rgba(147, 124, 189, 0.15), rgba(20, 22, 42, 0.8));
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.timeline-date {
+    display: inline-block;
+    font-size: 14px;
+    color: #8C45CE;
+    font-weight: 600;
+    margin-bottom: 8px;
+    padding: 4px 12px;
+    background: rgba(140, 69, 206, 0.1);
+    border-radius: 20px;
+}
+
+.timeline-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.timeline-text {
+    font-size: 15px;
+    color: #d1c7e6;
+    line-height: 1.6;
+}
+
+.timeline-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #1a1a2e;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.timeline-item:hover .timeline-image img {
+    transform: scale(1.03);
+}
+
+/* СТРАНИЦА АКЦИИ (SALE) */
+.sale-hero {
+    margin-top: 80px;
+    padding: 110px 0 60px;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../images/космонавт.jpg');
+    background-size: cover;
+    background-position: left -100px;
+    position: relative;
+}
+
+.sale-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 11, 28, 0.5);
+    z-index: 0;
+}
+
+.sale-card {
+    position: relative;
+    z-index: 1;
+    background: rgba(20, 22, 42, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 30px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.sale-badge {
+    display: inline-block;
+    background-color: #8C45CE;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(140, 69, 206, 0.4);
+}
+
+.sale-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sale-subtitle {
+    font-size: 16px;
+    color: #c9a8ff;
+    margin-bottom: 25px;
+}
+
+.sale-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
+}
+
+.sale-list li {
+    font-size: 15px;
+    color: #e0d6ff;
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.sale-list li::before {
+    content: '★';
+    color: #8C45CE;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+.sale-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: #b8b8b8;
+}
+
+.page-hero {
+    padding: 110px 0 40px;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 18px;
+    color: #c9a8ff;
+    margin-top: 8px;
+}
+
+.gallery-page {
+    padding: 20px 0 80px;
+}
+
+.gallery-grid-custom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.gallery-box {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: #1f1b36;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.gallery-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-box:hover img {
+    transform: scale(1.03);
+}
+
+.team-page {
+    padding: 20px 0 80px;
+}
+
+.team-grid-custom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.team-card {
+    text-align: center;
+    background: rgba(26, 26, 46, 0.6);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.auth-split {
+    display: flex;
+}
+
+/* ЛЕВАЯ ЧАСТЬ: ФОРМА */
+.auth-left {
+    flex: 1;
+    background-color: #0d0b1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.auth-form-box {
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-tabs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.auth-tab {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.auth-tab.active, .auth-tab:hover {
+    opacity: 1;
+    color: #ffffff;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #c9a8ff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 18px 18px 18px 55px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Manrope', sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #8C45CE;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #888;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #b8b8b8;
+}
+
+.checkbox-group input {
+    width: 18px;
+    height: 18px;
+    accent-color: #8C45CE;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.auth-right {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.auth-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #0d0b1c 0%, #0d0b1c 20%, rgba(13, 11, 28, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* АДАПТИВ (DESKTOP) */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav {
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .hero-card {
+        min-height: 520px;
+    }
+
+    .hero-title {
+        font-size: 64px;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+    }
+
+    .hero-brand {
+        font-size: 56px;
+    }
+
+    .about-project {
+        padding: 80px 0;
+    }
+
+    .about-card {
+        grid-template-columns: 1fr 1fr;
+        padding: 60px;
+        gap: 60px;
+    }
+
+    .section-title-left {
+        font-size: 40px;
+    }
+
+    .about-subtitle {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-image-wrapper {
+        min-height: 300px;
+        margin-top: 0;
+    }
+
+    .about-image-gradient {
+        background: linear-gradient(90deg, #151325 0%, rgba(21, 19, 37, 0.6) 40%, transparent 100%);
+    }
+
+    .sections,
+    .questions,
+    .gallery-preview {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 48px;
+        margin-bottom: 50px;
+    }
+
+    .sections-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .questions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .gallery-item {
+        aspect-ratio: 16/10;
+    }
+
+    .card-image1,
+    .card-image2,
+    .card-image3,
+    .card-image4 {
+        height: 280px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .question-image1,
+    .question-image2,
+    .question-image3 {
+        height: 220px;
+    }
+
+    .question-title {
+        font-size: 20px;
+    }
+
+    .gallery-item {
+        height: 240px;
+    }
+
+    .footer {
+        padding: 60px 0 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 2fr 1fr;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .footer-logo .logo {
+        font-size: 28px;
+    }
+
+    .footer-sections ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-resources h4,
+    .footer-sections h4 {
+        font-size: 18px;
+    }
+
+    .resources-logos {
+        justify-content: flex-start;
+    }
+
+    .resource-placeholder {
+        width: 80px;
+        height: 40px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+
+    /* СОЛНЕЧНАЯ СИСТЕМА (DESKTOP) */
+    .solar-hero .hero-title {
+        font-size: 48px;
+    }
+
+    .planets-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+
+    .planet-card .card-title {
+        font-size: 22px;
+    }
+
+    .planet-card .card-text {
+        font-size: 15px;
+    }
+
+    .planet-card .btn {
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    .card-sun {
+        margin-bottom: 60px;
+    }
+
+    .card-sun .planet-img {
+        max-width: 180px;
+    }
+
+    .planet-detail-hero .hero-title {
+        font-size: 48px;
+    }
+
+    .detail-card {
+        flex-direction: row;
+        padding: 50px;
+        align-items: center;
+    }
+
+    .detail-left {
+        flex: 1;
+        text-align: center;
+    }
+
+    .detail-right {
+        flex: 1;
+    }
+
+    .detail-planet-name {
+        font-size: 40px;
+    }
+
+    /* ИСТОРИЯ ВСЕЛЕННОЙ (DESKTOP) */
+    .history-hero {
+        padding: 130px 0 50px;
+    }
+
+    .history-hero .hero-title {
+        font-size: 48px;
+    }
+
+    .history-timeline {
+        padding: 0 0 80px;
+    }
+
+    .timeline::before {
+        display: block;
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .timeline-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .timeline-content,
+    .timeline-image {
+        width: 50%;
+    }
+
+    .timeline-title {
+        font-size: 26px;
+    }
+
+    .sale-hero {
+        padding: 130px 0 80px;
+        justify-content: flex-end;
+    }
+
+    .sale-hero::before {
+        background: linear-gradient(90deg, rgba(13, 11, 28, 0.2) 0%, rgba(13, 11, 28, 0.8) 100%);
+    }
+
+    .sale-card {
+        padding: 50px 40px;
+        max-width: 500px;
+        margin-right: 10%;
+        margin-left: auto;
+    }
+
+    .sale-title {
+        font-size: 42px;
+    }
+
+    .sale-subtitle {
+        font-size: 20px;
+    }
+
+    .sale-list li {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+
+    .sale-stats {
+        font-size: 15px;
+    }
+
+    .page-hero {
+        padding: 130px 0 50px;
+    }
+
+    .page-subtitle {
+        font-size: 20px;
+    }
+
+    .gallery-grid-custom {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .gallery-box {
+        aspect-ratio: 16/10;
+    }
+
+    .team-grid-custom {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+}
