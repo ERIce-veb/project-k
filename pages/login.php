@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация - Nebuline</title>
+    <title>Вход - Nebuline</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -13,12 +13,12 @@
         <div class="container header-container">
             <div class="logo"><img src="../assets/images/Logo.png" alt="Логотип" height="50"></div>
             <nav class="nav">
-                <a href="../index.html" class="nav-link">Главная</a>
-                <a href="solar-system.html" class="nav-link">Солнечная система</a>
-                <a href="history.html" class="nav-link">История Вселенной</a>
-                <a href="sale.html" class="nav-link">Особое</a>
-                <a href="gallery.html" class="nav-link">Галерея</a>
-                <a href="about.html" class="nav-link">О нас</a>
+                <a href="../index.php" class="nav-link">Главная</a>
+                <a href="solar-system.php" class="nav-link">Солнечная система</a>
+                <a href="history.php" class="nav-link">История Вселенной</a>
+                <a href="sale.php" class="nav-link">Особое</a>
+                <a href="gallery.php" class="nav-link">Галерея</a>
+                <a href="about.php" class="nav-link">О нас</a>
             </nav>
             <a href="login.html" class="login-btn">
                 <img src="../assets/images/Вход иконка.png" width="40" height="auto" alt="Вход">
@@ -26,20 +26,19 @@
         </div>
     </header>
 
-    <!-- БЛОК РЕГИСТРАЦИИ -->
+    <!-- БЛОК ВХОДА -->
     <section class="auth-split">
-        
         <div class="auth-left">
             <div class="auth-form-box">
                 <div class="auth-tabs">
-                    <a href="login.html" class="auth-tab">Вход</a>
-                    <a href="registration.html" class="auth-tab active">Регистрация</a>
+                    <a href="login.php" class="auth-tab active">Вход</a>
+                    <a href="registration.php" class="auth-tab">Регистрация</a>
                 </div>
                 
                 <form class="auth-form">
                     <div class="input-group">
                         <span class="input-icon">👤</span>
-                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="name" placeholder="Введите ваше имя" required>
                     </div>
 
                     <div class="input-group">
@@ -49,15 +48,10 @@
                     
                     <div class="input-group">
                         <span class="input-icon">🔒</span>
-                        <input type="password" placeholder="Придумайте пароль*" required>
+                        <input type="password" placeholder="Введите пароль*" required>
                     </div>
                     
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="policy" required>
-                        <label for="policy">Соглашение с политикой конфиденциальности</label>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary auth-btn">Зарегистрироваться</button>
+                    <button type="submit" class="btn btn-primary auth-btn">Войти</button>
                 </form>
             </div>
         </div>
@@ -76,12 +70,12 @@
             <div class="footer-sections">
                 <h4>Разделы</h4>
                 <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="solar-system.html">Солнечная система</a></li>
-                    <li><a href="history.html">История Вселенной</a></li>
-                    <li><a href="sale.html">События</a></li>
-                    <li><a href="gallery.html">Галерея</a></li>
-                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="../index.php">Главная</a></li>
+                    <li><a href="solar-system.php">Солнечная система</a></li>
+                    <li><a href="history.php">История Вселенной</a></li>
+                    <li><a href="sale.php">События</a></li>
+                    <li><a href="gallery.php">Галерея</a></li>
+                    <li><a href="about.php">О нас</a></li>
                 </ul>
             </div>
             <div class="footer-resources">

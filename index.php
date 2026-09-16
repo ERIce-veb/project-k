@@ -17,14 +17,14 @@
                 <img src="assets/images/Logo.png" alt="Логотип" width="auto" height="50px">
             </div>
             <nav class="nav">
-                <a href="index.html" class="nav-link">Главная</a>
-                <a href="pages/solar-system.html" class="nav-link">Солнечная система</a>
-                <a href="pages/history.html" class="nav-link">История Вселенной</a>
-                <a href="pages/sale.html" class="nav-link">Особое</a>
-                <a href="pages/gallery.html" class="nav-link">Галерея</a>
-                <a href="pages/about.html" class="nav-link">О нас</a>
+                <a href="index.php" class="nav-link">Главная</a>
+                <a href="pages/solar-system.php" class="nav-link">Солнечная система</a>
+                <a href="pages/history.php" class="nav-link">История Вселенной</a>
+                <a href="pages/sale.php" class="nav-link">Особое</a>
+                <a href="pages/gallery.php" class="nav-link">Галерея</a>
+                <a href="pages/about.php" class="nav-link">О нас</a>
             </nav>
-            <a href="pages/login.html" class="login-btn">
+            <a href="pages/login.php" class="login-btn">
                 <img src="assets/images/Вход иконка.png" width="20" height="20" alt="Вход">
             </a>
         </div>
@@ -79,19 +79,19 @@
         <div class="container">
             <h2 class="section-title">Исследуйте разделы</h2>
             <div class="sections-grid">
-                <a href="pages/solar-system.html" class="section-card">
+                <a href="pages/solar-system.php" class="section-card">
                     <div class="card-image1"></div>
                     <h3 class="card-title">Солнечная система</h3>
                 </a>
-                <a href="pages/sale.html" class="section-card">
+                <a href="pages/sale.php" class="section-card">
                     <div class="card-image2"></div>
                     <h3 class="card-title">События</h3>
                 </a>
-                <a href="pages/history.html" class="section-card">
+                <a href="pages/history.php" class="section-card">
                     <div class="card-image3"></div>
                     <h3 class="card-title">История Вселенной</h3>
                 </a>
-                <a href="pages/gallery.html" class="section-card">
+                <a href="pages/gallery.php" class="section-card">
                     <div class="card-image4"></div>
                     <h3 class="card-title">Галерея</h3>
                 </a>
@@ -104,21 +104,21 @@
         <div class="container">
             <h2 class="section-title">Популярные вопросы</h2>
             <div class="questions-grid">
-                <a href="pages/history.html">
+                <a href="pages/history.php">
                     <div class="question-card">
                         <div class="question-image1"></div>
                         <h3 class="question-title">Как рождаются звезды?</h3>
                         <p class="question-text">Процесс формирования звезд из газа и пыли в туманностях</p>
                     </div>
                 </a>
-                <a href="pages/solar-system.html">
+                <a href="pages/solar-system.php">
                     <div class="question-card">
                         <div class="question-image2"></div>
                         <h3 class="question-title">Какая планета самая уникальная?</h3>
                         <p class="question-text">Интересные факты про планеты Солнечной системы</p>
                     </div>
                 </a>
-                <a href="pages/history.html">
+                <a href="pages/history.php">
                     <div class="question-card">
                         <div class="question-image3"></div>
                         <h3 class="question-title">Что такое Большой взрыв?</h3>
@@ -158,7 +158,7 @@
             </div>
 
             <div class="gallery-btn-container">
-                <a href="pages/gallery.html" class="btn btn-primary">Посмотреть</a>
+                <a href="pages/gallery.php" class="btn btn-primary">Посмотреть</a>
             </div>
         </div>
     </section>
@@ -173,12 +173,12 @@
             <div class="footer-sections">
                 <h4>Разделы</h4>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="pages/solar-system.html">Солнечная система</a></li>
-                    <li><a href="pages/history.html">История Вселенной</a></li>
-                    <li><a href="pages/sale.html">События</a></li>
-                    <li><a href="pages/gallery.html">Галерея</a></li>
-                    <li><a href="pages/about.html">О нас</a></li>
+                    <li><a href="index.php">Главная</a></li>
+                    <li><a href="pages/solar-system.php">Солнечная система</a></li>
+                    <li><a href="pages/history.php">История Вселенной</a></li>
+                    <li><a href="pages/sale.php">События</a></li>
+                    <li><a href="pages/gallery.php">Галерея</a></li>
+                    <li><a href="pages/about.php">О нас</a></li>
                 </ul>
             </div>
             <div class="footer-resources">

@@ -16,14 +16,14 @@
             <div class="container header-container">
                 <div class="logo"><img src="../assets/images/Logo.png" alt="Логотип" height="50"></div>
                 <nav class="nav">
-                    <a href="../index.html" class="nav-link">Главная</a>
-                    <a href="solar-system.html" class="nav-link">Солнечная система</a>
-                    <a href="history.html" class="nav-link">История Вселенной</a>
-                    <a href="sale.html" class="nav-link">Особое</a>
-                    <a href="gallery.html" class="nav-link">Галерея</a>
-                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="../index.php" class="nav-link">Главная</a>
+                    <a href="solar-system.php" class="nav-link">Солнечная система</a>
+                    <a href="history.php" class="nav-link">История Вселенной</a>
+                    <a href="sale.php" class="nav-link">Особое</a>
+                    <a href="gallery.php" class="nav-link">Галерея</a>
+                    <a href="about.php" class="nav-link">О нас</a>
                 </nav>
-                <a href="login.html" class="login-btn">
+                <a href="login.php" class="login-btn">
                     <img src="../assets/images/Вход иконка.png" width="40" height="auto" alt="Вход">
                 </a>
             </div>
@@ -40,7 +40,7 @@
         <section class="solar-cards">
             <div class="container">
 
-                <a href="planet-detail.html" class="planet-card card-sun">
+                <a href="planet-detail.php" class="planet-card card-sun">
                     <div class="card-img-wrapper">
                         <img src="../assets/images/Солнце.png" alt="Солнце" class="planet-img no-shadow">
                     </div>
@@ -54,7 +54,7 @@
                 <!-- Сетка планет -->
                 <div class="planets-grid">
                     <!-- Меркурий -->
-                    <a href="planet-detail.html" class="planet-card">
+                    <a href="planet-detail.php" class="planet-card">
                         <div class="card-img-wrapper">
                             <img src="../assets/images/Меркурий.png" alt="Меркурий" class="planet-img">
                         </div>
@@ -65,7 +65,7 @@
                     </a>
 
                     <!-- Венера -->
-                    <a href="planet-detail.html" class="planet-card">
+                    <a href="planet-detail.php" class="planet-card">
                         <div class="card-img-wrapper">
                             <img src="../assets/images/Венера.png" alt="Венера" class="planet-img">
                         </div>
@@ -77,7 +77,7 @@
                     </a>
 
                     <!-- Земля -->
-                    <a href="planet-detail.html" class="planet-card">
+                    <a href="planet-detail.php" class="planet-card">
                         <div class="card-img-wrapper">
                             <img src="../assets/images/Земля.png" alt="Земля" class="planet-img">
                         </div>
@@ -88,7 +88,7 @@
                     </a>
 
                     <!-- Марс -->
-                    <a href="planet-detail.html" class="planet-card">
+                    <a href="planet-detail.php" class="planet-card">
                         <div class="card-img-wrapper">
                             <img src="../assets/images/Марс.png" alt="Марс" class="planet-img">
                         </div>
@@ -100,7 +100,7 @@
                     </a>
 
                     <!-- Юпитер -->
-                    <a href="planet-detail.html" class="planet-card">
+                    <a href="planet-detail.php" class="planet-card">
                         <div class="card-img-wrapper">
                             <img src="../assets/images/Юпитер.png" alt="Юпитер" class="planet-img">
                         </div>
@@ -112,7 +112,7 @@
                     </a>
 
                     <!-- Сатурн -->
-                    <a href="planet-detail.html" class="planet-card">
+                    <a href="planet-detail.php" class="planet-card">
                         <div class="card-img-wrapper">
                             <img src="../assets/images/Сатурн.png" alt="Сатурн" class="planet-img">
                         </div>
@@ -123,7 +123,7 @@
                     </a>
 
                     <!-- Уран -->
-                    <a href="planet-detail.html" class="planet-card">
+                    <a href="planet-detail.php" class="planet-card">
                         <div class="card-img-wrapper">
                             <img src="../assets/images/Уран.png" alt="Уран" class="planet-img">
                         </div>
@@ -135,7 +135,7 @@
                     </a>
 
                     <!-- Нептун -->
-                    <a href="planet-detail.html" class="planet-card">
+                    <a href="planet-detail.php" class="planet-card">
                         <div class="card-img-wrapper">
                             <img src="../assets/images/Нептун.png" alt="Нептун" class="planet-img">
                         </div>
@@ -159,12 +159,12 @@
             <div class="footer-sections">
                 <h4>Разделы</h4>
                 <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="solar-system.html">Солнечная система</a></li>
-                    <li><a href="history.html">История Вселенной</a></li>
-                    <li><a href="sale.html">События</a></li>
-                    <li><a href="gallery.html">Галерея</a></li>
-                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="../index.php">Главная</a></li>
+                    <li><a href="solar-system.php">Солнечная система</a></li>
+                    <li><a href="history.php">История Вселенной</a></li>
+                    <li><a href="sale.php">События</a></li>
+                    <li><a href="gallery.php">Галерея</a></li>
+                    <li><a href="about.php">О нас</a></li>
                 </ul>
             </div>
             <div class="footer-resources">
