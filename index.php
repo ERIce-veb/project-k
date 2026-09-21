@@ -1,3 +1,12 @@
+<?php
+date_default_timezone_set('Asia/Yekaterinburg');
+$current_hour = (int)date('G');
+if ($current_hour >= 6 && $current_hour < 20) {
+    $theme_class = 'light-theme';
+} else {
+    $theme_class = 'dark-theme';
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -8,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="<?php echo $theme_class; ?>">
 
     <!-- ШАПКА-->
     <header class="header">
