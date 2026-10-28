@@ -9,35 +9,14 @@ if ($current_hour >= 6 && $current_hour < 20) {
 ?>
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nebuline - Путешествие по Вселенной</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Nebuline - Путешествие по Вселенной</title><link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body class="<?php echo $theme_class; ?>">
 
-    <!-- ШАПКА-->
-    <header class="header">
-        <div class="container header-container">
-            <div class="logo">
-                <img src="assets/images/Logo.png" alt="Логотип" width="auto" height="50px">
-            </div>
-            <nav class="nav">
-                <a href="index.php" class="nav-link">Главная</a>
-                <a href="pages/solar-system.php" class="nav-link">Солнечная система</a>
-                <a href="pages/history.php" class="nav-link">История Вселенной</a>
-                <a href="pages/sale.php" class="nav-link">Особое</a>
-                <a href="pages/gallery.php" class="nav-link">Галерея</a>
-                <a href="pages/about.php" class="nav-link">О нас</a>
-            </nav>
-            <a href="pages/login.php" class="login-btn">
-                <img src="assets/images/Вход иконка.png" width="20" height="20" alt="Вход">
-            </a>
-        </div>
-    </header>
+    <?php include 'header.php'; ?>
 
     <!--ПЕРВЫЙ БЛОК-->
     <section class="hero">
@@ -172,40 +151,7 @@ if ($current_hour >= 6 && $current_hour < 20) {
         </div>
     </section>
 
-    <!-- ПОДВАЛ -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <div class="logo">Nebuline</div>
-            </div>
-
-            <div class="footer-sections">
-                <h4>Разделы</h4>
-                <ul>
-                    <li><a href="index.php">Главная</a></li>
-                    <li><a href="pages/solar-system.php">Солнечная система</a></li>
-                    <li><a href="pages/history.php">История Вселенной</a></li>
-                    <li><a href="pages/sale.php">События</a></li>
-                    <li><a href="pages/gallery.php">Галерея</a></li>
-                    <li><a href="pages/about.php">О нас</a></li>
-                </ul>
-            </div>
-            <div class="footer-resources">
-                <h4>Ресурсы</h4>
-                <div class="resources-logos">
-                    <div class="resource-placeholder">
-                        <img src="assets/images/NASA.png">
-                    </div>
-                    <div class="resource-placeholder">
-                        <img src="assets/images/ESA.png">
-                    </div>
-                    <div class="resource-placeholder">
-                        <img src="assets/images/Webb.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
 
 </body>
 

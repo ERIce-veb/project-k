@@ -664,7 +664,7 @@ a {
 }
 
 .main-planet {
-    background-image: url(../images/Фон\ для\ карточки.jpg);
+    background-image: url(../images/Фон для карточки.jpg);
     background-size: cover;
 }
 
@@ -1407,7 +1407,7 @@ a {
 /* СМЕНА ТЕМЫ */
 
 body.light-theme {
-    background-color: #f0ecf7 !important;
+    background-color: #937CBD !important;
     background-image: none !important;
     color: #2d1446 !important;
 }
