@@ -1,22 +1,4 @@
-<?php
-date_default_timezone_set('Asia/Yekaterinburg');
-$current_hour = (int)date('G');
-if ($current_hour >= 6 && $current_hour < 20) {
-    $theme_class = 'light-theme';
-} else {
-    $theme_class = 'dark-theme';
-}
-?>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nebuline - Путешествие по Вселенной</title><link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body class="<?php echo $theme_class; ?>">
-
-    <?php include 'header.php'; ?>
+<?php include 'header.php'; ?>
 
     <!--ПЕРВЫЙ БЛОК-->
     <section class="hero">
@@ -152,7 +134,3 @@ if ($current_hour >= 6 && $current_hour < 20) {
     </section>
 
     <?php include 'footer.php'; ?>
-
-</body>
-
-</html>
