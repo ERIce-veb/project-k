@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+<?php ob_start();?>
 
     <!--ПЕРВЫЙ БЛОК-->
     <section class="hero">
@@ -127,34 +128,27 @@
     </section>
 
 <?php
-$content = file_get_contents(__FILE__);
-$content = preg_replace('/<\?php.*?\?>/s', '', $content);
-$content = strip_tags($content);
+// Строки дз
+$page_html = ob_get_clean();
 
-// Пункт 2
-$vowels = "аеиоуыэюяАЕИОУЫЭЮЯ";
-$count = 0;
-for ($i = 0; $i < mb_strlen($content, 'UTF-8'); $i++) {
-    $char = mb_substr($content, $i, 1, 'UTF-8');
-    if (strpos($vowels, $char) !== false) {
-        $count++;
-    }
-}
+echo $page_html;
 
-// Пункт 3
-preg_match_all('/[а-яА-ЯёЁa-zA-Z]+/u', $content, $matches);
-$total = count($matches[0]);
+$entire_text = strip_tags($page_html);
 
-// Пункт 4
-$date = date("d.m.Y");
-$ny = mktime(0, 0, 0, 1, 1, date("Y") + 1);
-$days = ceil(($ny - time()) / 86400);
+preg_match_all('/[аеёиоуыэюя]/ui', $entire_text, $vowels);
+$countVowels = count($vowels[0]);
 
+preg_match_all('/[а-яё]+/ui', $entire_text, $words);
+$countWords = count($words[0]);
+
+$today = new DateTime();
+$newYear = new DateTime('next year January 1');
+$daysToNY = $today->diff($newYear)->days;
 echo "<div class='stats'>";
-echo "<p>Гласных букв: " . $count . "</p>";
-echo "<p>Слов на странице: " . $total . "</p>";
-echo "<p>Сегодня: " . $date . "</p>";
-echo "<p>До Нового года: " . $days . " дн.</p>";
+echo "<p>Гласных букв: " . $countVowels . "</p>";
+echo "<p>Слов в тексте: " . $countWords . "</p>";
+echo "<p>Сегодня: " . $today->format('d.m.Y') . "</p>";
+echo "<p>До Нового года: " . $daysToNY . " дн.</p>";
 echo "</div>";
 ?>
 
