@@ -1470,7 +1470,6 @@ body.dark-theme {
     color: #ffffff !important;
 }
 
-
-
-
-
+.c1 { color: red; }
+.c2 { color: blue; }
+.stats { padding: 20px; text-align: center; }

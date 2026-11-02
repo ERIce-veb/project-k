@@ -21,13 +21,22 @@
             <div class="about-card">
                 <div class="about-text">
                     <h2 class="section-title-left">О проекте</h2>
-                    <h3 class="about-subtitle">Путешествие по Вселенной — это познавательный сайт о космосе и нашем
-                        месте в нем</h3>
-                    <p>Этот сайт создан для тех, кто хочет лучше понять Вселенную — не как набор фактов, а как целостную
-                        систему, частью которой являемся и мы. Здесь нет сложных терминов без объяснений и пустых
-                        обещаний.</p>
-                    <p>Мы собрали материалы о Солнечной системе, истории Вселенной и современных научных открытиях.
-                        Каждый раздел написан простым языком.</p>
+                    <h3 class="about-subtitle">Путешествие по Вселенной — это познавательный сайт о космосе и нашем месте в нем</h3>
+                    <p>
+                        <?php
+                        $text = "Этот сайт создан для тех, кто хочет лучше понять Вселенную — не как набор фактов, а как целостную систему, частью которой являемся и мы. Здесь нет сложных терминов без объяснений и пустых обещаний.";
+                        $words = explode(" ", $text);
+                        foreach ($words as $i => $word) {
+                            if ($i % 2 == 0) {
+                                echo "<span class='c1'>" . $word . "</span> ";
+                            } else {
+                                echo "<span class='c2'>" . $word . "</span> ";
+                            }
+                        }
+                        ?>
+                    </p>
+
+                    <p>Мы собрали материалы о Солнечной системе, истории Вселенной и современных научных открытиях. Каждый раздел написан простым языком.</p>
                     <ul class="about-list">
                         <li><strong>Достоверность</strong> — информация проверяется по научным источникам</li>
                         <li><strong>Доступность</strong> — сложные понятия объясняются простым языком</li>
@@ -35,7 +44,6 @@
                         <li><strong>Атмосфера</strong> — дизайн помогает сосредоточиться</li>
                     </ul>
                 </div>
-
                 <div class="about-image-wrapper">
                     <div class="about-image-gradient"></div>
                     <img src="assets/images/О проекте.png" alt="О проекте" class="about-image">
@@ -103,34 +111,51 @@
     <section class="gallery-preview">
         <div class="container">
             <h2 class="section-title">Листая космос: галерея снимков</h2>
-
             <div class="gallery-blur-bg"></div>
-
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="assets/images/атмосфера.png" alt="Земля из космоса">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/андромеда.jpeg" alt="Галактика Андромеды">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/венерасолнце.png" alt="Венера на фоне Солнца">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/кассиопея.jpeg" alt="Туманность Кассиопея">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/сатурн.jpeg" alt="Сатурн">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/видуран.png" alt="Окрестности Урана">
-                </div>
+                <div class="gallery-item"><img src="assets/images/атмосфера.png" alt="Земля из космоса"></div>
+                <div class="gallery-item"><img src="assets/images/андромеда.jpeg" alt="Галактика Андромеды"></div>
+                <div class="gallery-item"><img src="assets/images/венерасолнце.png" alt="Венера на фоне Солнца"></div>
+                <div class="gallery-item"><img src="assets/images/кассиопея.jpeg" alt="Туманность Кассиопея"></div>
+                <div class="gallery-item"><img src="assets/images/сатурн.jpeg" alt="Сатурн"></div>
+                <div class="gallery-item"><img src="assets/images/видуран.png" alt="Окрестности Урана"></div>
             </div>
-
             <div class="gallery-btn-container">
                 <a href="pages/gallery.php" class="btn btn-primary">Посмотреть</a>
             </div>
         </div>
     </section>
 
-    <?php include 'footer.php'; ?>
+<?php
+$content = file_get_contents(__FILE__);
+$content = preg_replace('/<\?php.*?\?>/s', '', $content);
+$content = strip_tags($content);
+
+// Пункт 2
+$vowels = "аеиоуыэюяАЕИОУЫЭЮЯ";
+$count = 0;
+for ($i = 0; $i < mb_strlen($content, 'UTF-8'); $i++) {
+    $char = mb_substr($content, $i, 1, 'UTF-8');
+    if (strpos($vowels, $char) !== false) {
+        $count++;
+    }
+}
+
+// Пункт 3
+preg_match_all('/[а-яА-ЯёЁa-zA-Z]+/u', $content, $matches);
+$total = count($matches[0]);
+
+// Пункт 4
+$date = date("d.m.Y");
+$ny = mktime(0, 0, 0, 1, 1, date("Y") + 1);
+$days = ceil(($ny - time()) / 86400);
+
+echo "<div class='stats'>";
+echo "<p>Гласных букв: " . $count . "</p>";
+echo "<p>Слов на странице: " . $total . "</p>";
+echo "<p>Сегодня: " . $date . "</p>";
+echo "<p>До Нового года: " . $days . " дн.</p>";
+echo "</div>";
+?>
+
+<?php include 'footer.php'; ?>

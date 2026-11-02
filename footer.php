@@ -19,13 +19,13 @@
             <h4>Ресурсы</h4>
             <div class="resources-logos">
                 <div class="resource-placeholder">
-                    <img src="assets/images/NASA.png">
+                    <img src="/assets/images/NASA.png">
                 </div>
                 <div class="resource-placeholder">
-                    <img src="assets/images/ESA.png">
+                    <img src="/assets/images/ESA.png">
                 </div>
                 <div class="resource-placeholder">
-                    <img src="assets/images/Webb.png">
+                    <img src="/assets/images/Webb.png">
                 </div>
             </div>
         </div>
